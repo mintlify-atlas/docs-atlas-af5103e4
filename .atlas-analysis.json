@@ -1,0 +1,101 @@
+{
+  "projectType": "saas",
+  "projectName": "Streamy",
+  "projectDescription": "A real-time collaborative music streaming platform where users vote on what plays next",
+  "theme": "palm",
+  "primaryColor": "#8B5CF6",
+  "lightColor": "#A78BFA",
+  "darkColor": "#6D28D9",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/rooms",
+              "features/voting",
+              "features/realtime",
+              "features/youtube"
+            ]
+          },
+          {
+            "group": "User Guides",
+            "pages": [
+              "guides/creating-room",
+              "guides/joining-room",
+              "guides/adding-songs",
+              "guides/host-controls"
+            ]
+          },
+          {
+            "group": "Authentication",
+            "pages": [
+              "auth/google-oauth"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Development",
+        "groups": [
+          {
+            "group": "Architecture",
+            "pages": [
+              "dev/tech-stack",
+              "dev/database-schema",
+              "dev/project-structure"
+            ]
+          },
+          {
+            "group": "API Reference",
+            "pages": [
+              "api/endpoints",
+              "api/websocket-events"
+            ]
+          },
+          {
+            "group": "Contributing",
+            "pages": [
+              "contributing/setup",
+              "contributing/guidelines"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Room-based music streaming with host controls",
+    "Democratic voting system for song queue ordering",
+    "Real-time synchronization via WebSocket",
+    "YouTube video integration",
+    "Single room policy per user",
+    "Google OAuth authentication"
+  ],
+  "publicApiSurface": [
+    "POST /api/streams - Create a new room",
+    "GET /api/streams/songs - Get room queue",
+    "POST /api/streams/upvote - Upvote a song",
+    "POST /api/streams/downVote - Downvote a song",
+    "POST /api/streams/next - Skip to next song",
+    "GET /api/streams/check-host - Check if user is host",
+    "GET /api/streams/members - Get room member count",
+    "POST /api/streams/leaveroom - Leave current room",
+    "Socket: join-room - Join a room channel",
+    "Socket: leave-room - Leave a room channel",
+    "Socket: upvote - Broadcast upvote event",
+    "Socket: downvote - Broadcast downvote event",
+    "Socket: queue-update - Broadcast queue changes",
+    "Socket: song-change - Broadcast song changes"
+  ]
+}
